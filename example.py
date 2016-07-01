@@ -60,7 +60,7 @@ print(pprint.pformat(stats))
 """
 
 """ --- Request Heroes Stat --- """
-stats = ow.get_hero(battle_tag,'1')
+stats = ow.get_hero(battle_tag, '1')
 print(pprint.pformat(stats))
 """
 {'_request': {'api_ver': 1, 'route': '/api/v1/u/GloverDude-1471/heroes/1'},
