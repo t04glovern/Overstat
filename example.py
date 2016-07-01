@@ -59,7 +59,7 @@ print(pprint.pformat(stats))
  'region': 'us'}
 """
 
-""" --- Request Top 5 Heroes Stats --- """
+""" --- Request Heroes Stat --- """
 stats = ow.get_hero(battle_tag,'1')
 print(pprint.pformat(stats))
 """
