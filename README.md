@@ -1,2 +1,2 @@
 # overStat
-Stat comparison for Blizzards Overwatch. Uses OWAPI avaiable here https://github.com/SunDwarf/OWAPI
+Stat comparison for Blizzards Overwatch. Uses OWAPI available here https://github.com/SunDwarf/OWAPI
