@@ -1,6 +1,6 @@
 from overStat import *
 from HD44780 import *
-import time
+from time import strftime, localtime
 
 lcd = HD44780()
 
@@ -17,7 +17,7 @@ class OverLCD:
         lcd.clear()
         lcd.writeMsg('Overwatch Stats', 0.1)
         lcd.writeMsg('\nv0.1: t04glovern', 0.1)
-        time.sleep(1)
+        sleep(1)
         lcd.clear()
 
     def printWinLoss(self):
@@ -32,12 +32,18 @@ class OverLCD:
                       str(stats['overall_stats']['losses']) +
                       ' Lv' +
                       str(stats['overall_stats']['level'])), 0.1)
-        time.sleep(5)
+        sleep(5)
         lcd.clear()
+
+    def highNoon(self):
+        display.printIntro()
+        while(1):
+            lcd.writeMsg("    " + strftime("%H:%M:%S", localtime()))
+            sleep(5)
+            display.printWinLoss()
 
 
 if __name__ == '__main__':
     battle_tag = 'GloverDude#1471'
     display = OverLCD(battle_tag)
-    display.printIntro()
-    display.printWinLoss()
+    display.highNoon()
